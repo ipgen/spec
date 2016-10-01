@@ -30,7 +30,7 @@ As you can see, John doesn't need to care about the IP address that will be gene
 
 Here are the steps that tools that implement this spec need to follow to generate IPv6 addresses:
 
-1. Accept at least a network address in CIDR form and the NAME of the thing for which the IP address is being generated. It should be any arbitrary text so users can have the flexibility to use UUIDs or any other identifiers they want.
+1. Accept at least a network address in [CIDR notation] and the `NAME` of the thing for which the IP address is being generated. It should be any arbitrary text so users can have the flexibility to use UUIDs or any other identifiers they want.
 2. Validate the network address, returning imediately with an error if it isn't.
 3. Validate that the network prefix is less that 128, returning imediately with an error if it isn't. In such a case we only have 2 choices, return the same IP address or return an error since this prefix states that this is already a complete IP address. This spec chooses the latter as it helps detect mistakes.
 4. Calculate `NETWORK_LENGTH` by dividing the network prefix by 4, discarding any decimals (ie, we are only intrested in the integer). This gives us the total number of characters that we must never touch.
@@ -56,3 +56,5 @@ Here are the steps that tools that implement this spec need to follow to generat
 6. Format the resulting IP address in the IP6to4 format (eg ::10.19.28.118/104).
 7. Drop the leading "::" and trailing subnet prefix part (ie. "/104" in the example above).
 10. Follow step 11 in the [IPv6 Addresses](#ipv6-addresses) section.
+
+[CIDR notation]: https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation
