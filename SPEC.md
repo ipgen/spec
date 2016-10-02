@@ -34,7 +34,7 @@ Here are the steps that tools that implement this spec need to follow to generat
 2. Validate the network address, returning immediately with an error if it isn't valid.
 3. Validate that the network prefix is less that 128, returning immediately with an error if it isn't. In such a case we only have 2 choices, return the same IP address or return an error since this prefix states that this is already a complete IP address. This spec chooses the latter as it helps detect mistakes.
 4. Calculate `NETWORK_LENGTH` by dividing the network prefix by 4, discarding any decimals (i.e, we are only interested in the integer). This gives us the total number of characters that we must never touch.
-5. Expand the IPv6 address fully and save the first `NETWORK_LENGTH` characters as `NETWORK_HASH`.
+5. Expand the IPv6 address fully and save the first `NETWORK_LENGTH` characters as `NETWORK_HASH`. This hash should be in lowercase hexidecimal.
 6. Calculate `ADDRESS_LENGTH` by subtracting `NETWORK_LENGTH` from 32.
 7. Calculate `BLAKE_LEN` by first dividing `ADDRESS_LENGTH` by 2 and then adding the remainder of diving `ADDRESS_LENGTH` by 2.
 8. Compute `ADDRESS_HASH` by generating a `blake2b` hash of the `NAME` using `BLAKE_LEN` as output length.
