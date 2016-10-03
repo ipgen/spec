@@ -30,3 +30,4 @@ This is an open-source, community-driven project, developed under the [Apache 2.
 
 - [Official command line tool](https://github.com/ipgen/cli)
 - [Official Rust library](https://github.com/ipgen/rust)
+- [Official Go library](https://github.com/ipgen/go)
