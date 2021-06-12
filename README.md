@@ -18,7 +18,7 @@ Any given thing with a particular name in a particular subnet will always have t
 - Manually assigning IP addresses is frustrating and error prone, especially as the network grows bigger
 - Randomly generated IP addresses have a higher probability of colliding and no way to determine these collisions upfront
 - Centrally managing IP addresses, e.g. using service discovery tools or storing in a database, does not only introduce more complexity in deployment, it also introduces overhead (both network and storage) and worse still that central system is a potential point of failure
-- This spec introduces a standard way for both assigning IP addresses on your network and utilising them in a reliable manner. See our [example use case] to have a better understanding of how this can be helpful.
+- This spec introduces a standard way for both assigning IP addresses in your network and utilising them in a reliable manner. See our [example use case] to have a better understanding of how this can be helpful.
 
 [example use case]: https://github.com/ipgen/spec/blob/master/SPEC.md#example-use-case
 
