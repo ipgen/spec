@@ -4,7 +4,7 @@ This repository contains a [specification](SPEC.md) for generating unique and re
 
 ## Uniqueness
 
-Any IP address generated for any given thing with a unique name in a particular subnet has a very low probability of colliding with another IP address generated with a different name in the same subnet. This probability will obviously depend on how many IP addresses are available in that particular subnet. As such we recommend the following:-
+Any IP address generated for any given thing with a unique name in a particular subnet has a very low probability of colliding with another IP address generated with a different name in the same subnet. This probability will obviously depend on how many IP addresses are available in that particular subnet. As such we recommend the following:
 
 - Prefer IPv6 over IPv4 wherever possible
 - Use a network prefix that gives you the largest address space possible. That is, the smaller the network prefix the better. For IPv6 we recommend that you use a `/80` block or lower (this includes the popular `/64` and `/48` blocks).
